@@ -1,0 +1,30 @@
+body{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+    color: #333333;
+}
+div p{
+    font-style: italic;
+    color: #999999;
+    font-size: 90%;
+    right: 50px;
+}
+h2{
+    color: lightsalmon;
+}
+table, th, td{
+    border-collapse: collapse ;
+    border: 1px lightgrey solid;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+table th{
+    font: bold;
+    background-color: lightsalmon;
+}
+/* in figure six the even rows have #aaaaaa background*/
+tr:nth-child(even){
+    background-color: #aaaaaa;
+}

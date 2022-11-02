@@ -1,0 +1,68 @@
+html, body{
+    background: white;
+}
+
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    color: rgb(75, 75, 75);
+}
+p{
+    font-family: Arial, Helvetica, sans-serif;
+    color: gray;
+    font-size: 1.2 em;
+}
+
+div p{
+    font-style: italic;
+}
+
+a{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    padding: 10px;
+}
+a:link { text-decoration: none; }
+a:visited { text-decoration: none; }
+a:hover { text-decoration: none; }
+a:active { text-decoration: none; }
+.big-blue-border{
+    border: solid blue 10px;
+    background-color: orange;
+    padding: 20px 5px;
+    margin: 50px;
+}
+#myFirstPara{
+    color: green;
+    font-size: 2rem;
+}
+#mySecondPara{
+    background-color: white;
+    font-style: normal;
+}
+#first{
+    background-color: yellow;
+    top: 10px;
+    left: 0px;
+    cursor: pointer;
+    position: fixed;
+    width: 100px;
+    height: 100px;
+}
+#second{
+    position: relative;
+    left: 200px;
+    background-color: pink;
+    width: 50%;
+    height: 10em;
+    cursor: progress;
+}
+#third{
+    position: absolute;
+    top: 500px;
+    left: 20%;
+    background-color: powderblue;
+    width: 10rem;
+    height: 10rem;
+    cursor: help;
+}

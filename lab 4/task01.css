@@ -1,11 +1,12 @@
-/* task 02 */
-@import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
+
 :root{
     --header-color: #3399ff;
     --nav-hover: #0066ff;
 }
-body {
-    font-family: "Nunito", "Arial", sans-serif;
+
+body{
+    font-family: 'Nunito', 'Arial', sans-serif;
     background-color: #cce6ff;
 }
 header{
@@ -14,7 +15,7 @@ header{
 #cLogo{
     color: white;
     font-weight: bolder;
-    font-size: 1.5 em;
+    font-size: 1.5em;
     text-transform: uppercase;
     text-decoration: none;
     display: inline-block;
@@ -24,9 +25,12 @@ header{
 #cLogo:hover{
     text-shadow: red 2px 2px;  
 }
-header nav{
-    float: right;
+
+.topMenu {
+    display: flex;
+    justify-content: space-between;
 }
+
 header nav a{
     color: white;
     text-decoration: none;
@@ -34,7 +38,6 @@ header nav a{
 header nav ul{
     font-size: 1.3em;
     text-decoration: none;
-    list-style-type: none; 
     padding: 0px 10px;
 }
 header nav ul li{
@@ -52,4 +55,8 @@ header nav ul li:hover{
         --nav-hover: #ff6600;
     }
 }
-
+@media (max-width: 800px) {
+    #cLogo {
+        display: none;
+    }
+}

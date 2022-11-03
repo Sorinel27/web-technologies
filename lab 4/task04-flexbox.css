@@ -1,0 +1,51 @@
+.three-col {
+    margin: 20px auto 0 auto;
+}
+
+.col-1, .col-2, .col-3 {
+    padding: 20px;
+}
+
+.col-1 {
+    background-color: lightpink;
+}
+
+.col-2 {
+    background-color: lightgreen;
+}
+
+.col-3 {
+    background-color: aquamarine;
+}
+@media (min-width: 1500px) {
+    .three-col {
+        display: flex;
+    }
+    .col-3{
+        flex-basis: 33%;
+    }
+    .col-2{
+        flex-basis: 33%;
+    }
+    .col-1{
+        flex-basis: 33%;
+    }
+}
+@media (max-width: 1500px) {
+    .three-col {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .col-2, .col-3{
+        flex: 1;  
+    }
+}
+@media (max-width: 900px){
+    .three-col {
+        display: flex;
+        flex-direction: column;
+    }
+    .col-2, .col-3{
+        flex: 1;  
+    }
+}

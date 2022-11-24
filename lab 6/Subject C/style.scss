@@ -1,0 +1,72 @@
+@mixin eightPx {
+    @media (max-width: 850px) {
+        @content;
+    }
+}
+
+@mixin sixPx {
+    @media (max-width: 650px) {
+        @content;
+    }
+}
+html, body{
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    background-color: white;
+    div{
+        @include eightPx(){
+            font-size: 0.75em;
+        }
+        span{
+            display: flex;
+        }
+        .title{
+            @include sixPx(){
+                display: none;
+            }
+            justify-content: center;
+            img{
+                width: 120px;
+                height: 120px;
+                @include eightPx(){
+                    width: 85px;
+                    height: 85px;
+                }
+            }
+            h1{
+                margin-left: 40px;
+                font-size: 40px;
+                @include eightPx(){
+                    font-size: 30px;
+                }
+            }
+            background-color: rgb(65, 0, 65);
+            color: white;
+        }
+        .main{
+            display: grid;
+            grid-template-columns: 1fr 5fr;
+            @include sixPx() {
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr auto;
+            }
+            nav{
+                font-size: 3em;
+                @include eightPx(){
+                    font-size: 2.25em;
+                }
+                ul{
+                    list-style: none;
+                    padding-left: 0px;
+                    li{
+                        text-align: center;
+                    }
+                    li:hover{
+                        cursor: pointer;
+                        background-color: violet;
+                        border-radius: 10px;
+                    }
+                }
+            }
+        }
+    }
+}

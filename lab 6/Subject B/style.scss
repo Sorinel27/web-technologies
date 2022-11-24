@@ -1,0 +1,82 @@
+@mixin small-screen() {
+    @media (max-width: 1000px) {
+        @content;
+    }
+}
+
+@mixin xs-screen() {
+    @media (max-width: 600px) {
+        @content;
+    }
+}
+
+body{
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    background-color: rgb(198, 255, 201);
+}
+div{
+    display: flex;
+    @include xs-screen(){
+        flex-direction: column;
+    }
+    nav{
+        width: 100%;
+        ul{
+            margin-top: 50px;
+            padding-left: 20px;
+            padding-right: 20px;
+            font-size: 2em;
+            @include small-screen(){
+                font-size: 1.4em;
+            }
+            list-style: none;
+            @include xs-screen(){
+                text-align: center;
+            }
+            li{
+                @include xs-screen(){
+                    display: inline;
+                }
+                margin-bottom: 10px;
+                text-align: center;
+            }
+            li:hover{
+                background-color: aquamarine;
+                cursor: pointer;
+                border-radius: 10px;
+            }
+        }
+    }
+    main{
+        display: flex;
+        article{
+            font-size: 20px;
+            @include small-screen(){
+                font-size: 16px;
+            }
+            h1{
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+            p{
+                padding-left: 10px;
+                padding-right: 10px; 
+            }
+        }
+        aside{
+            background-color: lightgreen;
+            width: 100%;
+            @include small-screen(){
+                font-size: 11.2px;
+            }
+            h3{
+                padding-left: 10px; 
+                padding-right: 10px;
+            }
+            p{
+                padding-left: 10px;
+                padding-right: 10px; 
+            }
+        }
+    }
+}

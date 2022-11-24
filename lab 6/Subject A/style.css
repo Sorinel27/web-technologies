@@ -1,0 +1,85 @@
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: #fcd5f1;
+}
+
+body div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body div h1 {
+  font-size: 2em;
+}
+
+@media (max-width: 900px) {
+  body div h1 {
+    font-size: 0.8em;
+  }
+}
+
+body div p {
+  font-size: 18px;
+}
+
+body div span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-style: solid;
+  border-color: gray;
+  border-radius: 3px;
+  border-width: 2px;
+}
+
+@media (max-width: 650px) {
+  body div span {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+body div span img {
+  width: 200px;
+  height: 200px;
+}
+
+@media (max-width: 900px) {
+  body div span img {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+body div span .picDiv {
+  background-color: #ffb6ea;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (max-width: 650px) {
+  body div span .picDiv {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+body div span .picDiv h1 {
+  text-align: center;
+}
+
+body div span .picDiv:hover {
+  cursor: pointer;
+  background-color: lightcoral;
+}
+/*# sourceMappingURL=style.css.map */

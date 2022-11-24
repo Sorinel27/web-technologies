@@ -1,0 +1,59 @@
+@mixin small-screen(){
+    @media (max-width: 900px) {
+        @content;
+    }
+}
+@mixin xs-screen(){
+    @media (max-width: 650px) {
+        @content;
+    }
+}
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgb(252, 213, 241);
+    div{
+        display: flex;
+        flex-direction: column;
+        h1{
+            font-size: 2em;
+            @include small-screen(){
+                font-size: 0.8em;
+            }
+        }
+        p{
+            font-size: 18px;
+        }
+        span{
+            display: flex;
+            border-style: solid;
+            border-color: gray;
+            border-radius: 3px;
+            border-width: 2px;
+            @include xs-screen(){
+                flex-direction: column;
+            }
+            img{
+                width: 200px;
+                height: 200px;
+                @include small-screen(){
+                    width: 100px;
+                    height: 100px; 
+                }
+            }
+            .picDiv{
+                background-color: rgb(255, 182, 234);
+                display: flex;
+                @include xs-screen(){
+                    flex-direction: row;
+                }
+                h1{
+                    text-align: center;
+                }
+            }
+            .picDiv:hover{
+                cursor: pointer;
+                background-color: lightcoral;
+            }
+        }
+    }
+}

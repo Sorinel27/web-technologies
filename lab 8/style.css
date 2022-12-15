@@ -1,0 +1,47 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.left-div,
+.right-div {
+  flex-basis: 40%;
+  padding: 20px;
+}
+
+.left-div {
+  background-color: lightgoldenrodyellow;
+}
+
+.right-div {
+  background-color: lightgreen;
+}
+
+button {
+  font-size: 2em;
+}
+
+#h2Hover:hover {
+  cursor: pointer;
+  color: green;
+}
+
+#h3DblClick {
+  cursor: context-menu;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  border: 1px solid green;
+  padding: 5px;
+}
+
+#resultDiv {
+  background-color: limegreen;
+  font-size: 2em;
+  padding: 10px;
+}
